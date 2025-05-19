@@ -1,7 +1,7 @@
-# SecurityBulletinsx
+# OPC Security Bulletins
 ## Overview
-The OPC Foundation publishes security bulletins that affect software that it maintains or distributes. In many cases these bulletins will affect code that OPC vendors incorporate into their products. As a result, vendors will have to patch their products to address the vulnerabilities identified.
-Any vulnerabilities or security concerns should be reported to ‘securityteam AT opcfoundation DOT org’.
+The OPC Foundation publishes security bulletins that affect software that it maintains or distributes. In many cases these bulletins will affect code that OPC vendors incorporate into their products. As a result, vendors will have to patch their products to address the vulnerabilities identified. 
+Any vulnerabilities or security concerns should be reported to ‘securityteam AT opcfoundation DOT org’. 
 A PGP key to encrypt any sensitive security report can be found here.
 
 ## Process
