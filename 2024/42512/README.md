@@ -1,75 +1,76 @@
 # Security Advisory for CVE-2024-42512
 
-**Publisher**: OPC Foundation  
-**Category**: `security_advisory`  
-**CSAF Version**: 2.0  
-**Tracking ID**: OPC-2025-02-09  
-**Status**: Final  
-**Version**: 1.0  
-**Initial Release Date**: 2025-02-09  
-**Current Release Date**: 2025-02-09  
+**Tracking ID:** OPC-2025-02-09T00:00:00Z  
+**Version:** 1.0.0  
+**Status:** Final  
+**Initial Release Date:** 2025-02-09  
+**Current Release Date:** 2025-02-09  
 
-## Revision History
+## Legal Disclaimer
 
-- **1.0** (2025-02-09): Bulletin published
+The information provided in this disclosure is provided 'as is' without warranty of any kind. OPC Foundation disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall OPC Foundation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if OPC Foundation or its suppliers have been advised of the possibility o...
 
----
+## Publisher
+
+- **Name:** OPC Foundation  
+- **Category:** Vendor  
+- **Namespace:** https://opcfoundation.org/security/csaf
 
 ## Vulnerability: CVE-2024-42512
 
-**Alternate ID**: GCVE-105-2024-42512  
-**Title**: Bypass of application authentication via Basic128Rsa15 in OPC UA .NET Standard Stack  
-**Summary**: PDF version
+### Title
 
-### Threats
+Bypass of application authentication via Basic128Rsa15 in OPC UA .NET Standard Stack
 
-- **Impact**: Unauthorized attacker can bypass application authentication when Basic128Rsa15 is enabled. Most users unaffected as it is disabled by default.
+### Description
 
-### CVSS Score
-
-- **Base Score**: 5.9 (Medium)  
-- **Vector**: `CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N`  
-- **Version**: 3.1
-
-### Weakness
-
-- **CWE-208**: Observable Timing Discrepancy  
-  [CWE Reference](https://cwe.mitre.org/data/definitions/208.html)
+An unauthorized attacker can bypass application authentication when Basic128Rsa15 is enabled. Most users are unaffected as it is disabled by default.
 
 ### Discovery Date
 
-- **2025-02-09**
+2025-02-09
+
+### CWE
+
+- **ID:** CWE-208  
+- **Name:** Observable Timing Discrepancy  
+- [More Info](https://cwe.mitre.org/data/definitions/208.html)
 
 ### Acknowledgments
 
-- **Reporter**: Tom Tervoort  
-- **Organization**: Secura B.V.
+- **Reporter:** Tom Tervoort  
+- **Organization:** Secura B.V.  
+- **Summary:** Reported the issue.
 
-### References
+### Threat
 
-- [PDF version](https://files.opcfoundation.org/SecurityBulletins/OPC%20Foundation%20Security%20Bulletin%20CVE-2024-42512.pdf)
-- [CVE Record](https://www.cve.org/CVERecord?id=CVE-2024-42512)
-- [Patch Version](https://github.com/OPCFoundation/UA-.NETStandard/tree/1.5.374.158)
+- **Category:** Impact  
+- **Details:** Unauthorized attacker can bypass application authentication when Basic128Rsa15 is enabled.
 
 ### Remediation
 
-- **Type**: Vendor Fix  
-- **Details**: Update to OPC UA .NET Standard Stack version 1.5.374.158 or later  
-- **URL**: [Patch](https://github.com/OPCFoundation/UA-.NETStandard/tree/1.5.374.158)
+- **Vendor Fix:**  
+  - **Details:** Update to OPC UA .NET Standard Stack version 1.5.374.158 or later.  
+  - [Patch version](https://github.com/OPCFoundation/UA-.NETStandard/tree/1.5.374.158)
 
-### Workarounds
+- **Workaround:**  
+  - **Details:** Disable the Basic128Rsa15 security policy.
 
-- Disable the Basic128Rsa15 security policy.
+### CVSS Score
 
-### Involvement
-
-- **Vendor Status**: Fixed
-
----
+- **Version:** 3.1  
+- **Vector String:** `CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N`  
+- **Base Score:** 5.9  
+- **Base Severity:** Medium
 
 ## Affected Product
 
-- **Product Name**: OPC UA .NET Standard Stack  
-- **Product ID**: UA-.NETStandard  
-- **Generic Name**: UA-.NETStandard  
-- **Affected Version**: less than 1.5.374.158
+- **Product:** OPC UA .NET Standard Stack < 1.5.374.158  
+- **Product ID:** CSAFPID-01
+
+## References
+
+- [PDF version](https://files.opcfoundation.org/SecurityBulletins/OPC%20Foundation%20Security%20Bulletin%20CVE-2024-42512.pdf)
+- [CVE Record](https://www.cve.org/CVERecord?id=CVE-2024-42512)
+- [Patch Version on GitHub](https://github.com/OPCFoundation/UA-.NETStandard/tree/1.5.374.158)
+- [CWE-208: Observable Timing Discrepancy](https://cwe.mitre.org/data/definitions/208.html)
