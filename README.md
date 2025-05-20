@@ -4,7 +4,12 @@ The OPC Foundation publishes security advisories that affect specifications or s
 
 Any vulnerabilities or security concerns should be reported to ‘securityteam AT opcfoundation DOT org’. 
 
-A PGP key to encrypt any sensitive security report can be found [here](https://files.opcfoundation.org/SecurityBulletins/securityteam_public_key.txt).
+A PGP key to encrypt any sensitive security report can be found [here](https://files.opcfoundation.org/SecurityBulletins/securityteam_public_key.txt). 
+
+This repository is to provide machine-readable security advisories using the [OASIS Common Security Advisory Framework (CSAF) Version 2.0 standard](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html) for OPC Foundation security advisories. By providing machine-readable advisories using CSAF v2.0, vendors and providers of software and hardware can take proactive steps to enable automation and help to reduce the time required for enterprises to understand organizational impact and drive timely remediation.
+
+## OASIS CSAF 2.0 Standard
+CSAF is a standard for machine-readable security advisories developed by the [OASIS CSAF Technical Committee](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=csaf). CSAF enables individuals and organizations to successfully disclose and consume security advisories in machine-readable format. The standard also specifies the distribution and discovery of CSAF documents. The CSAF Security Advisory files found in this repository were designed following the CSAF v2.0 standard published by [OASIS Open](https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html).
 
 ## Process
 If an issue is reported, the OPC UA Security WG assesses it using tools such as the [Common Vulnerability Scoring System (CVSS)](https://www.first.org/cvss/). If the  OPC UA Security WG determines that the issue is a reportable vulnerability then it will assign a [GCVE identifier](https://gcve.eu/about/). Vendors are encouraged to use the GCVE identifier when they publish updates to their products so users can associate a product patch with a vulnerability reported by the OPC Foundation. 
