@@ -5,13 +5,9 @@
 |**Publication Date**|2025-02-08|
 |**Version**|1.0.0|
 |**Status**|final|
-
-|||
-|---|---|
 |**Publisher**|OPC Foundation|
 |**Publisher Type**|vendor|
 |**Namespace**|[https://opcfoundation.org/security/csaf](https://opcfoundation.org/security/csaf)|
-|||
 
 ## Affected Products
 

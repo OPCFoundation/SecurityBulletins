@@ -47,10 +47,6 @@
     }
 
     if ($json.document.publisher) {
-        Add-Content -Path $outFile -Value ""
-        Add-Content -Path $outFile -Value "|||"
-        Add-Content -Path $outFile -Value "|---|---|"
-
         if ($json.document.publisher.name) {
             $line = "|**Publisher**|" + $json.document.publisher.name + "|"
             Add-Content -Path $outFile -Value $line
@@ -63,7 +59,6 @@
             $line = "|**Namespace**|[" + $json.document.publisher.namespace + "](" + $json.document.publisher.namespace + ")" + "|"
             Add-Content -Path $outFile -Value $line
         }
-        Add-Content -Path $outFile -Value "|||"
     }
 
     if ($json.product_tree.branches) {    

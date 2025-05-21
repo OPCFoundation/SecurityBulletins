@@ -6,13 +6,9 @@
 |**Version**|1.0.0|
 |**Status**|final|
 |**Distribution**|[WHITE](https://www.first.org/tlp/)|
-
-|||
-|---|---|
 |**Publisher**|OPC Foundation|
 |**Publisher Type**|vendor|
 |**Namespace**|[https://opcfoundation.org/security/csaf](https://opcfoundation.org/security/csaf)|
-|||
 
 ## Affected Products
 
@@ -52,7 +48,6 @@ Do not use sign-only; always enable encryption.
 ##  References
 
 [Advisory Source](https://github.com/OPCFoundation/OPC-SecurityAdvisories/tree/latest/csaf/2025/001)  
-[Patch](https://github.com/OPCFoundation/UA-.NETStandard/releases/tag/1.5.374.118)  
 [CWE-703: Improper Resource Shutdown or Release](https://cwe.mitre.org/data/definitions/703.html)  
 
 ##  Legal Disclaimer
