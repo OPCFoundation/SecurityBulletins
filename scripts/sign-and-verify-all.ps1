@@ -9,6 +9,7 @@ $StartDir = Resolve-Path $StartDir
 # Resolve path to sign-and-verify.ps1
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $signScript = Join-Path $scriptDir "sign-and-verify.ps1"
+$generateReadmeScript = Join-Path $scriptDir "generate-readme.ps1"
 
 if (-not (Test-Path $signScript)) {
     Write-Host "sign-and-verify.ps1 not found in $scriptDir" -ForegroundColor Red
@@ -36,6 +37,11 @@ foreach ($dir in $targetDirs) {
         & $signScript
     } catch {
         Write-Host "Error running sign-and-verify.ps1 in {$dir}: $_" -ForegroundColor Red
+    }
+    try {
+        & $generateReadmeScript
+    } catch {
+        Write-Host "Error running generate-readme.ps1 in {$dir}: $_" -ForegroundColor Red
     }
     Pop-Location
 }

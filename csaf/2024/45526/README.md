@@ -1,76 +1,46 @@
 # Security Advisory for CVE-2024-45526
 
-**Tracking ID:** OPC-2024-10-15-45526  
-**Version:** 1.0.0  
-**Status:** Final  
-**Initial Release Date:** 2024-10-15  
-**Current Release Date:** 2024-10-15  
+|||
+|---|---|
+|**Publication Date**|2024-10-14|
+|**Version**|1.0.0|
+|**Status**|final|
 
-## Legal Disclaimer
+|||
+|---|---|
+|**Publisher**|OPC Foundation|
+|**Publisher Type**|vendor|
+|**Namespace**|[https://opcfoundation.org/security/csaf](https://opcfoundation.org/security/csaf)|
+|||
 
-The information provided in this disclosure is provided 'as is' without warranty of any kind. OPC Foundation disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall OPC Foundation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if OPC Foundation or its suppliers have been advised of the possibility o...
+## Affected Products
 
-## Publisher
+- OPC UA .NET Standard Stack <1.5.374.118
 
-- **Name:** OPC Foundation  
-- **Category:** Vendor  
-- **Namespace:** https://opcfoundation.org/security/csaf
+## Vulnerabilities
+### CVE-2024-45526
+Performance degradation attack in OPC UA .NET Standard Stack  
 
-## Vulnerability: CVE-2024-45526
+CWE-770 Allocation of Resources Without Limits or Throttling  
 
-### Title
-
-Performance degradation attack in OPC UA .NET Standard Stack
-
-### Description
-
-An unauthorized attacker can trigger a gradual degradation in performance.
-
-### Discovery Date
-
-2024-10-15
-
-### CWE
-
-- **ID:** CWE-770  
-- **Name:** Allocation of Resources Without Limits or Throttling  
-- [More Info](https://cwe.mitre.org/data/definitions/770.html)
-
-### Acknowledgments
-
-- **Reporter:** Florian Kohnhäuser  
-- **Organization:** ABB  
-- **Summary:** Reported the issue.
-
-### Threat
-
-- **Category:** Impact  
-- **Details:** An unauthorized attacker can trigger a gradual degradation in performance.
-
-### Remediation
-
-- **Vendor Fix:**  
-  - **Details:** Update to OPC UA .NET Standard Stack version 1.5.374.118 or later.  
-  - [Patch version](https://github.com/OPCFoundation/UA-.NETStandard/releases/tag/1.5.374.118)
-
-- **Workaround:**  
-  - **Details:** Disable saving rejected certificates after authentication failure.
+### Threats
+- An unauthorized attacker can trigger a gradual degradation in performance.
 
 ### CVSS Score
+**Base Score:** <span style='color:orange'>5.3 (MEDIUM)</span>  
+**Vector:**: [CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L](https://www.first.org/cvss/calculator/3-1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L)  
 
-- **Version:** 3.1  
-- **Vector String:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L`  
-- **Base Score:** 5.3  
-- **Base Severity:** Medium
+### Remediations
+**Vendor Fix** ([link](https://github.com/OPCFoundation/UA-.NETStandard/releases/tag/1.5.374.118))  
+Update to OPC UA .NET Standard Stack version 1.5.374.118 or later.  
+  
+**Workaround**  
+Disable saving rejected certificates after authentication failure.  
+  
 
-## Affected Product
+### Acknowledgments
+- Florian Kohnhäuser of ABB for Reported the issue.
 
-- **Product:** OPC UA .NET Standard Stack < 1.5.374.118  
-- **Product ID:** CSAFPID-01
+##  Legal Disclaimer
 
-## References
-
-- [PDF version](https://files.opcfoundation.org/SecurityBulletins/OPC%20Foundation%20Security%20Bulletin%20CVE-2024-45526.pdf)
-- [CVE Record](https://www.cve.org/CVERecord?id=CVE-2024-45526)
-- [Patch Version on GitHub](https://github.com/OPCFoundation/UA-.NETStandard/releases/tag/1.5.374.118)
-- [CWE-770: Allocation of Resources Without Limits or Throttling](https://cwe.mitre.org/data/definitions/770.html)
+The information provided in this disclosure is provided 'as is' without warranty of any kind. OPC Foundation disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall OPC Foundation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if OPC Foundation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply

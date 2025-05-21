@@ -1,76 +1,60 @@
 # Security Update for the OPC UA .NET Standard Stack
 
-**Tracking ID:** OPC-2025-02-01-001  
-**Version:** 1.0.0  
-**Status:** Final  
-**Initial Release Date:** 2025-02-01  
-**Current Release Date:** 2025-02-01  
+|||
+|---|---|
+|**Publication Date**|2025-01-31|
+|**Version**|1.0.0|
+|**Status**|final|
+|**Distribution**|[WHITE](https://www.first.org/tlp/)|
 
-## Legal Disclaimer
+|||
+|---|---|
+|**Publisher**|OPC Foundation|
+|**Publisher Type**|vendor|
+|**Namespace**|[https://opcfoundation.org/security/csaf](https://opcfoundation.org/security/csaf)|
+|||
 
-The information provided in this disclosure is provided 'as is' without warranty of any kind. OPC Foundation disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall OPC Foundation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if OPC Foundation or its suppliers have been advised of the possibility o...
+## Affected Products
 
-## TLP Label
+- OPC UA .NET Standard Stack <1.5.374.11
 
-- **TLP:** WHITE
+## Vulnerabilities
+### GCVE-105-2025-001
+Connection exhaustion via improper shutdown in OPC UA .NET Standard Stack  
 
-## Publisher
+### Summary
+An unauthorized attacker can consume all available connections by exploiting improper resource shutdown.  
 
-- **Name:** OPC Foundation  
-- **Category:** Vendor  
-- **Namespace:** https://opcfoundation.org/security/csaf
+CWE-404 Improper Resource Shutdown or Release  
 
-## Vulnerability: GCVE-105-2025-001
-
-### Title
-
-Connection exhaustion via improper shutdown in OPC UA .NET Standard Stack
-
-### Description
-
-An unauthorized attacker can consume all available connections by exploiting improper resource shutdown.
-
-### Discovery Date
-
-2025-02-01
-
-### CWE
-
-- **ID:** CWE-404  
-- **Name:** Improper Resource Shutdown or Release  
-- [More Info](https://cwe.mitre.org/data/definitions/703.html)
-
-### Acknowledgments
-
-- **Reporter:** Rikard Hansson  
-- **Organization:** ABB  
-- **Summary:** Reported the issue.
-
-### Threat
-
-- **Category:** Impact  
-- **Details:** Denial of service via resource exhaustion.
-
-### Remediation
-
-- **Vendor Fix:**  
-  - **Details:** Update to OPC UA .NET Standard Stack version 1.5.374.118 or later.  
-  - [Patch version](https://github.com/OPCFoundation/UA-.NETStandard/releases/tag/1.5.374.118)
+### Threats
+- Denial of service via resource exhaustion.
 
 ### CVSS Score
+**Base Score:** <span style='color:red'>7.5 (HIGH)</span>  
+**Vector:**: [CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H](https://www.first.org/cvss/calculator/3-1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)  
 
-- **Version:** 3.1  
-- **Vector String:** `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H`  
-- **Base Score:** 7.5  
-- **Base Severity:** High
+### Remediations
+**Vendor Fix** ([link](https://github.com/OPCFoundation/UA-.NETStandard/releases/tag/1.5.374.118))  
+Update to OPC UA .NET Standard Stack version 1.5.374.118 or later.  
+  
+**Mitigation**  
+The attacker has to have the ability to spoof IP packets and needs access to the private key of the client.  
+  
+  
+**Workaround**  
+Do not use sign-only; always enable encryption.  
+  
 
-## Affected Product
+### Acknowledgments
+- Rikard Hansson of ABB for discovering the issue.
 
-- **Product:** OPC UA .NET Standard Stack < 1.5.374.11  
-- **Product ID:** CSAFPID-01
+##  References
 
-## References
+[Advisory Source](https://github.com/OPCFoundation/OPC-SecurityAdvisories/tree/latest/csaf/2025/001)  
+[Patch](https://github.com/OPCFoundation/UA-.NETStandard/releases/tag/1.5.374.118)  
+[CWE-703: Improper Resource Shutdown or Release](https://cwe.mitre.org/data/definitions/703.html)  
 
-- [Bulletin Source](https://github.com/OPCFoundation/SecurityAdvisories/tree/master/2025/001)
-- [Patch Version on GitHub](https://github.com/OPCFoundation/UA-.NETStandard/releases/tag/1.5.374.118)
-- [CWE-703: Improper Resource Shutdown or Release](https://cwe.mitre.org/data/definitions/703.html)
+##  Legal Disclaimer
+
+The information provided in this disclosure is provided 'as is' without warranty of any kind. OPC Foundation disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall OPC Foundation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if OPC Foundation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply
