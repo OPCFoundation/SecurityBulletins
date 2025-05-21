@@ -24,7 +24,7 @@ TBA
 
 ##  References
 
-[Advisory Source](https://github.com/OPCFoundation/SecurityAdvisories/tree/latest/2025/002)  
+[Advisory Source](https://github.com/OPCFoundation/OPC-SecurityAdvisories/tree/latest/csaf/2025/002)  
 
 ##  Legal Disclaimer
 
