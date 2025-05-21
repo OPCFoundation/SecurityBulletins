@@ -103,7 +103,7 @@
 
             if ($vulnerability.cwe) {    
                 Add-Content -Path $outFile -Value ""
-                $line = $vulnerability.cwe.id + " " + $vulnerability.cwe.name + "  " 
+                $line = "[" + $vulnerability.cwe.id + "](https://cwe.mitre.org/data/definitions/" + $vulnerability.cwe.id.Replace("CWE-", "") + ".html): " + $vulnerability.cwe.name + "  " 
                 Add-Content -Path $outFile -Value $line
             }
 

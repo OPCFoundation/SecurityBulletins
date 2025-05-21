@@ -17,7 +17,7 @@
 ### CVE-2024-42512
 Bypass of application authentication via Basic128Rsa15 in OPC UA .NET Standard Stack  
 
-CWE-208 Observable Timing Discrepancy  
+[CWE-208](https://cwe.mitre.org/data/definitions/208.html): Observable Timing Discrepancy  
 
 ### Threats
 - Unauthorized attacker can bypass application authentication when Basic128Rsa15 is enabled. Most users unaffected as it is disabled by default.

@@ -17,7 +17,7 @@
 ### CVE-2024-45526
 Performance degradation attack in OPC UA .NET Standard Stack  
 
-CWE-770 Allocation of Resources Without Limits or Throttling  
+[CWE-770](https://cwe.mitre.org/data/definitions/770.html): Allocation of Resources Without Limits or Throttling  
 
 ### Threats
 - An unauthorized attacker can trigger a gradual degradation in performance.

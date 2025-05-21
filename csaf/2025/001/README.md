@@ -21,7 +21,7 @@ Connection exhaustion via improper shutdown in OPC UA .NET Standard Stack
 ### Summary
 An unauthorized attacker can consume all available connections by exploiting improper resource shutdown.  
 
-CWE-404 Improper Resource Shutdown or Release  
+[CWE-404](https://cwe.mitre.org/data/definitions/404.html): Improper Resource Shutdown or Release  
 
 ### Threats
 - Denial of service via resource exhaustion.
@@ -48,7 +48,6 @@ Do not use sign-only; always enable encryption.
 ##  References
 
 [Advisory Source](https://github.com/OPCFoundation/OPC-SecurityAdvisories/tree/latest/csaf/2025/001)  
-[CWE-703: Improper Resource Shutdown or Release](https://cwe.mitre.org/data/definitions/703.html)  
 
 ##  Legal Disclaimer
 

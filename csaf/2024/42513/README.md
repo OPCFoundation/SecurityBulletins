@@ -17,7 +17,7 @@
 ### CVE-2024-42513
 Authentication bypass via HTTPS in OPC UA .NET Standard Stack  
 
-CWE-305 Authentication Bypass by Primary Weakness  
+[CWE-305](https://cwe.mitre.org/data/definitions/305.html): Authentication Bypass by Primary Weakness  
 
 ### Threats
 - An unauthorized attacker can bypass application authentication using HTTPS endpoints with security policies other than 'None'.
